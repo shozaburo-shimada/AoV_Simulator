@@ -5,6 +5,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour {
     public GameObject ArcanaUI;
     public GameObject BuildUI;
+    public GameObject SelectionPanel;
 
     // Use this for initialization
     void Start () {
@@ -35,6 +36,27 @@ public class UIManager : MonoBehaviour {
                 Debug.Log("Other");
                 break;
         }
+    }
+
+    int selected_arcana;
+    public void RedArcanaIconClicked(int num){
+        Debug.Log("Red Arcana Clicked");
+        //Open Selection Window
+        SelectionPanel.SetActive(true);
+        selected_arcana = num;
+    }
+    public void VioletArcanaIconClicked(int num){
+        Debug.Log("Violet Arcana Clicked");
+    }
+    public void GreenArcanaIconClicked(int num){
+        Debug.Log("Gren Arcana Clicked");
+    }
+
+}
+
+public class ArcanaIcon{
+    public void onClicked(){
+
     }
 
 }
